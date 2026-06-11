@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PawCare Veterinary Clinic — Compassionate Care for Every Paw</title>
+  <meta name="description" content="PawCare Veterinary Clinic offers complete pet healthcare: wellness exams, vaccinations, surgery, dental care, grooming and 24/7 emergency services." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-icon">🐾</span>
+        <span>Paw<em>Care</em></span>
+      </a>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#home" class="nav__link active-link">Home</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#team" class="nav__link">Our Vets</a></li>
+        <li><a href="#testimonials" class="nav__link">Reviews</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="tel:+15551234567" class="nav__phone">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>(555) 123-4567</span>
+        </a>
+        <a href="#appointment" class="btn btn--primary nav__cta">Book a Visit</a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+      <div class="container hero__container">
+        <div class="hero__content reveal">
+          <span class="tag">🩺 Trusted by 12,000+ pet families</span>
+          <h1 class="hero__title">
+            Compassionate care for <span class="highlight">every paw</span>, claw &amp; tail
+          </h1>
+          <p class="hero__text">
+            From routine check-ups to 24/7 emergency care, our award-winning veterinary
+            team treats your pets like family — because to us, they are.
+          </p>
+          <div class="hero__buttons">
+            <a href="#appointment" class="btn btn--primary btn--lg">
+              Book an Appointment
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#services" class="btn btn--ghost btn--lg">Explore Services</a>
+          </div>
+          <div class="hero__badges">
+            <div class="hero__badge"><strong>★ 4.9</strong><span>1,400+ reviews</span></div>
+            <div class="hero__badge"><strong>24/7</strong><span>Emergency care</span></div>
+            <div class="hero__badge"><strong>15+</strong><span>Years of service</span></div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal delay-2">
+          <div class="hero__card-main">
+            <div class="hero__pet">🐕</div>
+            <div class="hero__pet hero__pet--cat">🐈</div>
+            <svg class="hero__ring" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 10" />
+            </svg>
+          </div>
+          <div class="float-card float-card--1">
+            <span class="float-card__icon">💉</span>
+            <div><strong>Vaccination</strong><small>Up to date ✓</small></div>
+          </div>
+          <div class="float-card float-card--2">
+            <span class="float-card__icon">❤️</span>
+            <div><strong>Heart Rate</strong><small>Healthy — 78 bpm</small></div>
+          </div>
+          <div class="float-card float-card--3">
+            <span class="float-card__icon">📅</span>
+            <div><strong>Next Visit</strong><small>Annual wellness exam</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Stats ===== -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat reveal"><h3><span class="counter" data-target="12000">0</span>+</h3><p>Happy Patients</p></div>
+        <div class="stat reveal delay-1"><h3><span class="counter" data-target="15">0</span>+</h3><p>Years of Experience</p></div>
+        <div class="stat reveal delay-2"><h3><span class="counter" data-target="9">0</span></h3><p>Expert Veterinarians</p></div>
+        <div class="stat reveal delay-3"><h3><span class="counter" data-target="98">0</span>%</h3><p>Recovery Success Rate</p></div>
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="tag">Our Services</span>
+          <h2 class="section__title">Complete care, from nose to tail</h2>
+          <p class="section__subtitle">Everything your companion needs under one roof — delivered with skill, patience and plenty of treats.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card reveal">
+            <div class="service-card__icon">🩺</div>
+            <h3>Wellness Exams</h3>
+            <p>Thorough nose-to-tail check-ups to catch problems early and keep your pet thriving at every life stage.</p>
+            <a href="#appointment" class="service-card__link">Book now →</a>
+          </article>
+          <article class="service-card reveal delay-1">
+            <div class="service-card__icon">💉</div>
+            <h3>Vaccinations</h3>
+            <p>Tailored vaccine plans that protect against rabies, parvo, distemper and other preventable diseases.</p>
+            <a href="#appointment" class="service-card__link">Book now →</a>
+          </article>
+          <article class="service-card reveal delay-2">
+            <div class="service-card__icon">🦷</div>
+            <h3>Dental Care</h3>
+            <p>Professional cleanings, digital dental X-rays and extractions for fresh breath and pain-free chewing.</p>
+            <a href="#appointment" class="service-card__link">Book now →</a>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon">🏥</div>
+            <h3>Surgery</h3>
+            <p>From routine spay &amp; neuter to advanced soft-tissue procedures in our state-of-the-art surgical suite.</p>
+            <a href="#appointment" class="service-card__link">Book now →</a>
+          </article>
+          <article class="service-card reveal delay-1">
+            <div class="service-card__icon">🚑</div>
+            <h3>24/7 Emergency</h3>
+            <p>Accidents don't keep office hours. Our emergency team is on call around the clock, every day of the year.</p>
+            <a href="#appointment" class="service-card__link">Book now →</a>
+          </article>
+          <article class="service-card reveal delay-2">
+            <div class="service-card__icon">✂️</div>
+            <h3>Grooming &amp; Spa</h3>
+            <p>Baths, trims, nail care and de-shedding treatments that leave your pet looking — and feeling — fabulous.</p>
+            <a href="#appointment" class="service-card__link">Book now →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__visual reveal">
+          <div class="about__img-card">
+            <span class="about__emoji">🐶🐱</span>
+            <div class="about__experience">
+              <strong>15+</strong>
+              <span>Years caring<br/>for pets</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__content reveal delay-1">
+          <span class="tag">Why PawCare</span>
+          <h2 class="section__title">Medicine with heart, science with soul</h2>
+          <p>
+            Founded in 2011, PawCare began with one simple belief: every animal deserves
+            the same standard of care we'd want for ourselves. Today our fear-free,
+            AAHA-accredited clinic blends cutting-edge diagnostics with good
+            old-fashioned kindness.
+          </p>
+          <ul class="about__list">
+            <li><span>✓</span> Fear-Free certified handling for anxious pets</li>
+            <li><span>✓</span> In-house lab, ultrasound &amp; digital X-ray</li>
+            <li><span>✓</span> Transparent pricing — estimates before treatment</li>
+            <li><span>✓</span> Separate cat &amp; dog waiting areas</li>
+          </ul>
+          <a href="#team" class="btn btn--primary">Meet Our Team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Team ===== -->
+    <section class="section team" id="team">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="tag">Our Vets</span>
+          <h2 class="section__title">The humans behind the healing</h2>
+          <p class="section__subtitle">Board-certified veterinarians who genuinely love what they do.</p>
+        </div>
+        <div class="team__grid">
+          <article class="team-card reveal">
+            <div class="team-card__avatar" style="--av: linear-gradient(135deg,#0ea5a4,#34d399)">SM</div>
+            <h3>Dr. Sarah Mitchell</h3>
+            <span class="team-card__role">Chief Veterinarian · Surgery</span>
+            <p>20 years of surgical expertise and an uncanny ability to win over even the grumpiest cats.</p>
+          </article>
+          <article class="team-card reveal delay-1">
+            <div class="team-card__avatar" style="--av: linear-gradient(135deg,#f59e0b,#f97316)">JR</div>
+            <h3>Dr. James Rodriguez</h3>
+            <span class="team-card__role">Internal Medicine</span>
+            <p>Our diagnostic detective — if something's wrong, Dr. Rodriguez will get to the bottom of it.</p>
+          </article>
+          <article class="team-card reveal delay-2">
+            <div class="team-card__avatar" style="--av: linear-gradient(135deg,#8b5cf6,#ec4899)">AC</div>
+            <h3>Dr. Amara Chen</h3>
+            <span class="team-card__role">Dentistry &amp; Exotic Pets</span>
+            <p>From parrot beaks to bulldog molars, Dr. Chen keeps every smile in the animal kingdom bright.</p>
+          </article>
+          <article class="team-card reveal delay-3">
+            <div class="team-card__avatar" style="--av: linear-gradient(135deg,#3b82f6,#06b6d4)">EP</div>
+            <h3>Dr. Elena Petrova</h3>
+            <span class="team-card__role">Emergency &amp; Critical Care</span>
+            <p>Calm under pressure and on call when it matters most — nights, weekends and holidays.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="tag">Reviews</span>
+          <h2 class="section__title">Wagging tails &amp; happy humans</h2>
+        </div>
+
+        <div class="slider reveal" id="slider">
+          <div class="slider__track" id="slider-track">
+            <blockquote class="slide">
+              <div class="slide__stars">★★★★★</div>
+              <p>"When our beagle Max swallowed a sock at 2 a.m., PawCare's emergency team saved his life. They called us with updates every few hours. I'll never go anywhere else."</p>
+              <footer><strong>Rachel T.</strong><span> · Max's mom 🐕</span></footer>
+            </blockquote>
+            <blockquote class="slide">
+              <div class="slide__stars">★★★★★</div>
+              <p>"My cat Luna is terrified of vets, but the fear-free handling here is real. She actually purred during her exam. I didn't know that was possible."</p>
+              <footer><strong>Daniel K.</strong><span> · Luna's dad 🐈</span></footer>
+            </blockquote>
+            <blockquote class="slide">
+              <div class="slide__stars">★★★★★</div>
+              <p>"Transparent pricing, zero upselling, and a team that remembers my dog's name every single visit. PawCare sets the standard for what a vet clinic should be."</p>
+              <footer><strong>Priya S.</strong><span> · Biscuit's mom 🐩</span></footer>
+            </blockquote>
+          </div>
+          <div class="slider__controls">
+            <button class="slider__btn" id="prev-btn" aria-label="Previous review">←</button>
+            <div class="slider__dots" id="slider-dots"></div>
+            <button class="slider__btn" id="next-btn" aria-label="Next review">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Appointment ===== -->
+    <section class="section appointment" id="appointment">
+      <div class="container appointment__grid">
+        <div class="appointment__info reveal">
+          <span class="tag tag--light">Book a Visit</span>
+          <h2 class="section__title">Ready when your pet needs us</h2>
+          <p>Fill in the form and our front desk will confirm your appointment within one business hour. For emergencies, please call us directly.</p>
+          <div class="appointment__hours">
+            <h4>🕐 Opening Hours</h4>
+            <ul>
+              <li><span>Mon – Fri</span><span>8:00 AM – 8:00 PM</span></li>
+              <li><span>Saturday</span><span>9:00 AM – 6:00 PM</span></li>
+              <li><span>Sunday</span><span>10:00 AM – 4:00 PM</span></li>
+              <li class="appointment__emergency"><span>Emergency</span><span>24 / 7 / 365</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="appointment__form reveal delay-1" id="appointment-form" novalidate>
+          <h3>Book an Appointment</h3>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="owner-name">Your Name *</label>
+              <input type="text" id="owner-name" name="ownerName" placeholder="Jane Doe" required />
+            </div>
+            <div class="form__group">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="pet-name">Pet's Name *</label>
+              <input type="text" id="pet-name" name="petName" placeholder="Buddy" required />
+            </div>
+            <div class="form__group">
+              <label for="pet-type">Pet Type *</label>
+              <select id="pet-type" name="petType" required>
+                <option value="" disabled selected>Select…</option>
+                <option>Dog</option>
+                <option>Cat</option>
+                <option>Bird</option>
+                <option>Rabbit</option>
+                <option>Reptile</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="service">Service *</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select…</option>
+                <option>Wellness Exam</option>
+                <option>Vaccination</option>
+                <option>Dental Care</option>
+                <option>Surgery Consultation</option>
+                <option>Grooming &amp; Spa</option>
+                <option>Emergency</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label for="date">Preferred Date *</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="notes">Notes for the vet</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Anything we should know about your pet…"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--full">Confirm Booking 🐾</button>
+          <p class="form__success" id="form-success" hidden>✅ Thank you! Your request was received — we'll call you shortly to confirm.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Contact / Map ===== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact-card reveal">
+            <span class="contact-card__icon">📍</span>
+            <h4>Visit Us</h4>
+            <p>2847 Willow Creek Drive<br/>Portland, OR 97205</p>
+          </div>
+          <div class="contact-card reveal delay-1">
+            <span class="contact-card__icon">📞</span>
+            <h4>Call Us</h4>
+            <p><a href="tel:+15551234567">(555) 123-4567</a><br/>Emergency: <a href="tel:+15559110000">(555) 911-0000</a></p>
+          </div>
+          <div class="contact-card reveal delay-2">
+            <span class="contact-card__icon">✉️</span>
+            <h4>Email Us</h4>
+            <p><a href="mailto:hello@pawcare.vet">hello@pawcare.vet</a><br/><a href="mailto:emergency@pawcare.vet">emergency@pawcare.vet</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="nav__logo nav__logo--footer"><span class="nav__logo-icon">🐾</span> Paw<em>Care</em></a>
+        <p>Compassionate, modern veterinary medicine for the pets of Portland since 2011.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#team">Our Vets</a>
+        <a href="#appointment">Book a Visit</a>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <a href="#services">Wellness Exams</a>
+        <a href="#services">Vaccinations</a>
+        <a href="#services">Surgery</a>
+        <a href="#services">24/7 Emergency</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <a href="tel:+15551234567">(555) 123-4567</a>
+        <a href="mailto:hello@pawcare.vet">hello@pawcare.vet</a>
+        <a href="#contact">2847 Willow Creek Dr,<br/>Portland, OR</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> PawCare Veterinary Clinic. All rights reserved. Made with ❤️ for pets.</p>
+    </div>
+  </footer>
+
+  <a href="#home" class="scroll-top" id="scroll-top" aria-label="Back to top">↑</a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
