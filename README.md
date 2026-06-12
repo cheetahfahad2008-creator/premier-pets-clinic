@@ -15,17 +15,10 @@ A modern, fully responsive website for a veterinary clinic — built with plain 
 
 ## Running locally
 
-Just open `index.html` in a browser, or serve the folder:
-
-```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
-```
+The whole site is a single self-contained file — just open `index.html` in any browser. No server, build step or extra files needed.
 
 ## Structure
 
 ```
-index.html        # All page markup
-css/styles.css    # Design system + section styles + responsive rules
-js/script.js      # Nav, slider, counters, reveal animations, form logic
+index.html        # Complete site: markup, styles and scripts in one file
 ```
