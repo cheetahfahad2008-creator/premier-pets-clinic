@@ -1,11 +1,11 @@
-# 🐾 PawCare Veterinary Clinic
+# 🐾 Premier Pets Clinic
 
 A modern, fully responsive website for a veterinary clinic — built with plain HTML, CSS and JavaScript. No build step, no dependencies.
 
 ## Features
 
 - **Hero section** with animated blob visual, floating info cards and trust badges
-- **Services grid** — wellness exams, vaccinations, dental, surgery, 24/7 emergency, grooming
+- **Services grid** — wellness exams, vaccinations, dental, surgery, emergency care, grooming
 - **About section** highlighting the clinic's fear-free, transparent approach
 - **Team cards** for the veterinarians
 - **Testimonial slider** with autoplay, arrows and dots

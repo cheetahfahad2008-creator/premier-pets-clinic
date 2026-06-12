@@ -1,5 +1,5 @@
 /* ============================================================
-   PawCare Veterinary Clinic — Interactions
+   Premier Pets Clinic — Interactions
    ============================================================ */
 
 // ----- Header shadow on scroll -----
@@ -132,6 +132,19 @@ const successMsg = document.getElementById('form-success');
 const dateInput = document.getElementById('date');
 dateInput.min = new Date().toISOString().split('T')[0];
 
+// The clinic is closed on Fridays
+const isFriday = (value) => new Date(`${value}T12:00:00`).getDay() === 5;
+
+dateInput.addEventListener('change', () => {
+  if (dateInput.value && isFriday(dateInput.value)) {
+    dateInput.classList.add('error');
+    dateInput.setCustomValidity('We are closed on Fridays — please pick another day.');
+    dateInput.reportValidity();
+  } else {
+    dateInput.setCustomValidity('');
+  }
+});
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -141,6 +154,12 @@ form.addEventListener('submit', (e) => {
     field.classList.toggle('error', empty);
     if (empty) valid = false;
   });
+
+  if (dateInput.value && isFriday(dateInput.value)) {
+    dateInput.classList.add('error');
+    dateInput.reportValidity();
+    valid = false;
+  }
 
   if (!valid) return;
 
