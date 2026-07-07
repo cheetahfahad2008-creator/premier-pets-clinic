@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services & Pricing — Premier Pets Clinic, Doha</title>
+  <meta name="description" content="Wellness exams, vaccinations, dental care, surgery, emergency care and grooming for cats and dogs in Doha — with transparent starting prices and a written estimate before any treatment." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 130'%3E%3Crect width='130' height='130' rx='26' fill='%2316151A'/%3E%3Cg transform='translate(15,11)' fill='none' stroke='%23BE9B45' stroke-linecap='round'%3E%3Ccircle cx='50' cy='11' r='7' fill='%23E3C56E' stroke='none'/%3E%3Cpath d='M50 100 L16 46 M50 100 L84 46' stroke-width='9'/%3E%3Cpath d='M50 18 L50 100' stroke-width='7'/%3E%3Cpath d='M50 24 C36 33 64 44 50 54 C36 64 64 75 50 86' stroke-width='6.5' stroke='%23E3C56E'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/fonts.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Header (shared across all pages) ===== -->
+  <header class="header">
+    <nav class="nav container" aria-label="Main">
+      <a href="index.html" class="brand" aria-label="Premier Pets Clinic — home">
+        <svg viewBox="0 0 100 130" width="28" height="36" fill="none" aria-hidden="true">
+          <circle cx="50" cy="11" r="6.5" fill="url(#cad-h)"/>
+          <path d="M50 100 L16 46 M50 100 L84 46" stroke="url(#cad-h)" stroke-width="6" stroke-linecap="round"/>
+          <path d="M50 18 L50 100" stroke="url(#cad-h)" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M50 24 C36 33 64 44 50 54 C36 64 64 75 50 86" stroke="url(#cad-h)" stroke-width="4" stroke-linecap="round"/>
+          <defs><linearGradient id="cad-h" x1="18" y1="8" x2="82" y2="115" gradientUnits="userSpaceOnUse"><stop stop-color="#E3C56E"/><stop offset="1" stop-color="#BE9B45"/></linearGradient></defs>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__en">Premier Pets Clinic</span>
+          <span class="brand__ar" lang="ar" dir="rtl">بريمير بيتس كلينك</span>
+        </span>
+      </a>
+
+      <ul class="nav__menu">
+        <li><a class="nav__link" href="index.html">Home</a></li>
+        <li><a class="nav__link" href="services.html" aria-current="page">Services</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="tel:30011105" class="nav__phone">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>3001 1105</span>
+        </a>
+        <a href="contact.html" class="btn btn--gold nav__cta">Book<span class="nav__cta-long">&nbsp;Appointment</span></a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-panel">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav__panel" id="nav-panel">
+      <div class="container">
+        <ul>
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="services.html" aria-current="page">Services &amp; Pricing</a></li>
+          <li><a class="nav__link" href="about.html">About &amp; Team</a></li>
+          <li><a class="nav__link" href="contact.html">Contact &amp; Booking</a></li>
+        </ul>
+        <div class="nav__panel-meta">
+          <a href="tel:30011105"><strong>Call 3001 1105</strong></a>
+          <span>Saturday – Thursday, 9:00 AM – 10:00 PM · Friday closed</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Page hero ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="label">Services &amp; pricing</span>
+        <h1>Clear services, honest prices</h1>
+        <p>No jargon, no surprises. Prices below are starting points — your vet confirms a written estimate with you before anything begins.</p>
+      </div>
+    </section>
+
+    <!-- ===== Service cards ===== -->
+    <section class="section--tight" style="padding-bottom: var(--s-9);">
+      <div class="container">
+        <div class="cards-grid">
+          <article class="card reveal" id="wellness">
+            <span class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h-.5A2.5 2.5 0 0 0 2 4.5v4a6 6 0 0 0 12 0v-4A2.5 2.5 0 0 0 11.5 2H11"/><path d="M8 14.5V16a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-3.5"/><circle cx="20" cy="10" r="2.3"/></svg></span>
+            <h3>Wellness exams</h3>
+            <p>A full nose-to-tail physical — heart, lungs, teeth, skin, joints and weight. We explain what we find in plain language, and you leave with a simple plan, not a lecture.</p>
+            <div class="card__price">
+              <!-- TODO: replace with real detail — starting prices -->
+              <strong>From QAR —</strong>
+              <span>starting price</span>
+            </div>
+            <a href="contact.html?service=wellness" class="btn btn--dark">Book this service</a>
+          </article>
+
+          <article class="card reveal d1" id="vaccinations">
+            <span class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/></svg></span>
+            <h3>Vaccinations</h3>
+            <p>Core vaccines for cats and dogs — including rabies — on a schedule planned around your pet’s age and lifestyle. We remind you when the next dose is due.</p>
+            <div class="card__price">
+              <!-- TODO: replace with real detail — starting prices -->
+              <strong>From QAR —</strong>
+              <span>per vaccine</span>
+            </div>
+            <a href="contact.html?service=vaccinations" class="btn btn--dark">Book this service</a>
+          </article>
+
+          <article class="card reveal d2" id="dental">
+            <span class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3C5.5 3 4 5 4 7.5c0 3.5 1.8 4.5 2.2 7.5.3 2.3.8 6 2.3 6 1.7 0 1.3-3.4 2-5.5.4-1.3 2.6-1.3 3 0 .7 2.1.3 5.5 2 5.5 1.5 0 2-3.7 2.3-6 .4-3 2.2-4 2.2-7.5C20 5 18.5 3 16 3c-1.6 0-2.4.8-4 .8S9.6 3 8 3Z"/></svg></span>
+            <h3>Dental care</h3>
+            <p>Teeth cleaning under safe anaesthesia to prevent pain, infection and bad breath. Includes dental X-rays and a check of every single tooth before your pet goes home.</p>
+            <div class="card__price">
+              <!-- TODO: replace with real detail — starting prices -->
+              <strong>From QAR —</strong>
+              <span>full cleaning</span>
+            </div>
+            <a href="contact.html?service=dental" class="btn btn--dark">Book this service</a>
+          </article>
+
+          <article class="card reveal" id="surgery">
+            <span class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></span>
+            <h3>Surgery</h3>
+            <p>Spay and neuter, lump removals and soft-tissue procedures in a modern surgical suite. Your vet walks you through everything first — and calls you the moment your pet wakes up.</p>
+            <div class="card__price">
+              <!-- TODO: replace with real detail — starting prices -->
+              <strong>From QAR —</strong>
+              <span>with estimate first</span>
+            </div>
+            <a href="contact.html?service=surgery" class="btn btn--dark">Book this service</a>
+          </article>
+
+          <article class="card reveal d1" id="emergency">
+            <span class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg></span>
+            <h3>Emergency care</h3>
+            <p>If something feels wrong, don’t wait. Call <a class="link-gold" href="tel:30011105">3001 1105</a> while you’re on the way — we’ll be ready at the door, every open hour of every open day.</p>
+            <div class="card__price">
+              <!-- TODO: replace with real detail — starting prices -->
+              <strong>From QAR —</strong>
+              <span>triage first, always</span>
+            </div>
+            <a href="contact.html?service=emergency" class="btn btn--dark">Book this service</a>
+          </article>
+
+          <article class="card reveal d2" id="grooming">
+            <span class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/></svg></span>
+            <h3>Grooming &amp; spa</h3>
+            <p>Baths, trims, nail care and de-shedding, handled gently by groomers who work alongside our vets. Nervous pets get extra time, never restraint.</p>
+            <div class="card__price">
+              <!-- TODO: replace with real detail — starting prices -->
+              <strong>From QAR —</strong>
+              <span>bath &amp; tidy</span>
+            </div>
+            <a href="contact.html?service=grooming" class="btn btn--dark">Book this service</a>
+          </article>
+        </div>
+
+        <div class="gold-rule" aria-hidden="true" style="margin-top: var(--s-8);">
+          <svg viewBox="0 0 100 130" width="24" height="31" fill="none">
+            <circle cx="50" cy="11" r="6.5" fill="url(#cad-s)"/>
+            <path d="M50 100 L16 46 M50 100 L84 46" stroke="url(#cad-s)" stroke-width="6" stroke-linecap="round"/>
+            <path d="M50 18 L50 100" stroke="url(#cad-s)" stroke-width="4.5" stroke-linecap="round"/>
+            <path d="M50 24 C36 33 64 44 50 54 C36 64 64 75 50 86" stroke="url(#cad-s)" stroke-width="4" stroke-linecap="round"/>
+            <defs><linearGradient id="cad-s" x1="18" y1="8" x2="82" y2="115" gradientUnits="userSpaceOnUse"><stop stop-color="#E3C56E"/><stop offset="1" stop-color="#BE9B45"/></linearGradient></defs>
+          </svg>
+        </div>
+        <p class="muted" style="text-align:center; max-width: 560px; margin: var(--s-5) auto 0;">
+          Every treatment starts with a written estimate you approve. Final prices depend on your pet’s size, age and needs — never on surprises.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section--bone">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="label">Common questions</span>
+          <h2>Before you visit</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details class="faq">
+            <summary>What happens at a first visit?</summary>
+            <div>Your vet examines your pet nose to tail, listens to your concerns, and explains everything in plain language. You approve a written estimate before any treatment. Plan for 30–45 minutes — first visits are unhurried on purpose.</div>
+          </details>
+          <details class="faq">
+            <summary>How do I pay, and when do I know the cost?</summary>
+            <div>You’ll see a written estimate before we begin — you approve it first, always. We accept cards and cash at the front desk after the visit.</div>
+          </details>
+          <details class="faq">
+            <summary>What vaccination schedule does my pet need?</summary>
+            <div>Puppies and kittens start their core vaccines around 6–8 weeks, with boosters every 3–4 weeks until about 16 weeks. Adults need boosters yearly or every three years depending on the vaccine. We map out the schedule for you and send reminders.</div>
+          </details>
+          <details class="faq">
+            <summary>Do you treat birds, rabbits or other exotic pets?</summary>
+            <div>Yes — our dentistry and exotics vet sees birds, rabbits and most small companion animals. Mention the species when you book so we schedule the right doctor and enough time.</div>
+          </details>
+          <details class="faq">
+            <summary>Do I need an appointment, or can I walk in?</summary>
+            <div>Walk-ins are welcome every open day, Saturday to Thursday, 9:00 AM to 10:00 PM. Booking ahead means little to no waiting — and in an emergency, call <a class="link-gold" href="tel:30011105">3001 1105</a> so we’re ready when you arrive.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Final CTA band ===== -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>Not sure which service your pet needs?</h2>
+        <p>Book a wellness exam and we’ll take it from there — or call us and describe what you’re seeing.</p>
+        <div class="cta-band__actions">
+          <a href="contact.html" class="btn btn--gold btn--lg">Book Appointment</a>
+          <a href="tel:30011105" class="btn btn--ghost-light btn--lg">Call 3001 1105</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer (shared across all pages) ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="brand" aria-label="Premier Pets Clinic — home">
+            <svg viewBox="0 0 100 130" width="28" height="36" fill="none" aria-hidden="true">
+              <circle cx="50" cy="11" r="6.5" fill="url(#cad-f)"/>
+              <path d="M50 100 L16 46 M50 100 L84 46" stroke="url(#cad-f)" stroke-width="6" stroke-linecap="round"/>
+              <path d="M50 18 L50 100" stroke="url(#cad-f)" stroke-width="4.5" stroke-linecap="round"/>
+              <path d="M50 24 C36 33 64 44 50 54 C36 64 64 75 50 86" stroke="url(#cad-f)" stroke-width="4" stroke-linecap="round"/>
+              <defs><linearGradient id="cad-f" x1="18" y1="8" x2="82" y2="115" gradientUnits="userSpaceOnUse"><stop stop-color="#E3C56E"/><stop offset="1" stop-color="#BE9B45"/></linearGradient></defs>
+            </svg>
+            <span class="brand__text">
+              <span class="brand__en">Premier Pets Clinic</span>
+              <span class="brand__ar" lang="ar" dir="rtl">بريمير بيتس كلينك</span>
+            </span>
+          </a>
+          <p class="footer__tag">Precise, gentle veterinary care for the cats and dogs of Doha — in English and Arabic.</p>
+          <div class="footer__social">
+            <!-- TODO: replace with real detail — social media profile links -->
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <!-- TODO: replace with real detail — confirm WhatsApp number & country code -->
+            <a href="https://wa.me/97430011105" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.2L2.1 22l4.9-1.6A9.9 9.9 0 1 0 12.04 2Zm0 1.7a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 0 1 12.04 3.7ZM8.9 8c-.2 0-.5.1-.7.4-.2.2-.9.8-.9 2s.9 2.4 1 2.6c.1.2 1.8 2.9 4.4 3.9 2.2.9 2.6.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-.9-1-1.2-1.7-.1-.2 0-.4.1-.5l.6-.7c.2-.2.2-.4.1-.6-.1-.2-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.9Z"/></svg></a>
+          </div>
+        </div>
+
+        <nav class="footer__col" aria-label="Footer">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="about.html">About &amp; Team</a></li>
+            <li><a href="contact.html">Contact &amp; Booking</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h4>Opening hours</h4>
+          <div class="hours-table">
+            <div><span>Sat – Thu</span><span>9:00 AM – 10:00 PM</span></div>
+            <div><span>Friday</span><span>Closed</span></div>
+            <div class="muted-row"><span>Emergencies</span><span><a href="tel:30011105">Call 3001 1105</a></span></div>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Find us</h4>
+          <div class="footer__contact">
+            <address>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <!-- TODO: replace with real detail — street address -->
+              <span>Al Waab Street<br/>Doha, Qatar</span>
+            </address>
+            <a href="tel:30011105">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>3001 1105</span>
+            </a>
+            <a href="mailto:hello@premierpetsclinic.com">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>hello@premierpetsclinic.com</span>
+            </a>
+            <!-- TODO: replace with real detail — map embed / location image -->
+            <figure class="map-ph map-ph--mini">
+              <figcaption>
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Map placeholder</span>
+                <small>Directions on the contact page</small>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span data-year>2026</span> Premier Pets Clinic · <span class="arabic" lang="ar" dir="rtl">بريمير بيتس كلينك</span> · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

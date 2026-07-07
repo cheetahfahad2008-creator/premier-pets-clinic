@@ -3,1447 +3,374 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Premier Pets Clinic — Veterinary Care in Dubai</title>
-  <meta name="description" content="Premier Pets Clinic in Dubai offers appointments, vaccinations, and routine care for cats and dogs — plus dental, surgery and grooming. Open Sat–Thu, 9 AM – 10 PM." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@500;600&display=swap" rel="stylesheet" />
-  <style>
-/* ============================================================
-   Premier Pets Clinic — Stylesheet
-   ============================================================ */
-
-:root {
-  /* Brand palette: ink, gold and cream per Premier Pets Clinic guidelines */
-  --clr-primary: #A8893B;
-  --clr-primary-dark: #8C7330;
-  --clr-primary-light: #EFE5C6;
-  --clr-accent: #C9A951;
-  --clr-accent-soft: #F1E8CE;
-  --clr-dark: #16140F;
-  --clr-gold-light: #E6D294;
-  --clr-text: #3D3A33;
-  --clr-muted: #7D766A;
-  --clr-bg: #F7F4EE;
-  --clr-bg-soft: #F0EBDF;
-  --clr-white: #ffffff;
-
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-body: "Manrope", system-ui, sans-serif;
-  --font-arabic: "Noto Naskh Arabic", serif;
-
-  --radius: 18px;
-  --radius-lg: 28px;
-  --shadow-sm: 0 2px 12px rgba(22, 20, 15, 0.07);
-  --shadow-md: 0 10px 35px rgba(22, 20, 15, 0.11);
-  --shadow-lg: 0 25px 60px rgba(22, 20, 15, 0.15);
-
-  --header-h: 76px;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
-
-body {
-  font-family: var(--font-body);
-  color: var(--clr-text);
-  background: var(--clr-bg);
-  line-height: 1.65;
-  overflow-x: hidden;
-}
-
-img { max-width: 100%; display: block; }
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
-button { font-family: inherit; cursor: pointer; }
-
-.container {
-  width: min(1160px, 92%);
-  margin-inline: auto;
-}
-
-/* ===== Typography helpers ===== */
-.section { padding: 96px 0; }
-
-.section__header {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 56px;
-}
-
-.section__title {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 600;
-  color: var(--clr-dark);
-  line-height: 1.18;
-  margin: 14px 0 16px;
-}
-
-.section__subtitle { color: var(--clr-muted); font-size: 1.05rem; }
-
-.tag {
-  display: inline-block;
-  background: var(--clr-primary-light);
-  color: var(--clr-primary-dark);
-  font-weight: 700;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 7px 18px;
-  border-radius: 100px;
-}
-
-.tag--light { background: rgba(201, 169, 81, 0.18); color: var(--clr-gold-light); }
-
-.highlight {
-  position: relative;
-  color: var(--clr-primary);
-  white-space: nowrap;
-}
-.highlight::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 6px;
-  height: 0.38em;
-  background: var(--clr-accent-soft);
-  z-index: -1;
-  border-radius: 4px;
-}
-
-/* ===== Buttons ===== */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 13px 26px;
-  border-radius: 100px;
-  border: 2px solid transparent;
-  transition: all 0.25s ease;
-}
-
-.btn--primary {
-  background: var(--clr-dark);
-  color: var(--clr-gold-light);
-  box-shadow: 0 8px 20px rgba(22, 20, 15, 0.28);
-}
-.btn--primary:hover {
-  background: var(--clr-primary);
-  color: var(--clr-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(168, 137, 59, 0.4);
-}
-
-.btn--ghost {
-  border-color: #DCD4C2;
-  color: var(--clr-dark);
-  background: #fff;
-}
-.btn--ghost:hover { border-color: var(--clr-primary); color: var(--clr-primary); transform: translateY(-2px); }
-
-.btn--lg { padding: 16px 32px; font-size: 1rem; }
-.btn--full { width: 100%; justify-content: center; border: none; }
-
-/* ============================================================
-   Header / Nav
-   ============================================================ */
-.header {
-  position: fixed;
-  inset: 0 0 auto;
-  height: var(--header-h);
-  z-index: 100;
-  background: rgba(247, 244, 238, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  transition: box-shadow 0.3s ease;
-}
-.header.scrolled { box-shadow: var(--shadow-sm); }
-
-.nav {
-  height: var(--header-h);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.nav__logo {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  font-family: var(--font-display);
-  font-size: 1.02rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--clr-dark);
-}
-.nav__logo-mark { width: 36px; height: 36px; flex: none; }
-.nav__logo-text { white-space: nowrap; }
-
-.nav__menu {
-  display: flex;
-  gap: 30px;
-}
-.nav__link {
-  font-weight: 600;
-  font-size: 0.93rem;
-  color: var(--clr-text);
-  transition: color 0.2s;
-  position: relative;
-  padding: 4px 0;
-}
-.nav__link::after {
-  content: "";
-  position: absolute;
-  left: 0; bottom: -3px;
-  width: 0; height: 2.5px;
-  background: var(--clr-primary);
-  border-radius: 2px;
-  transition: width 0.25s ease;
-}
-.nav__link:hover, .nav__link.active-link { color: var(--clr-primary); }
-.nav__link:hover::after, .nav__link.active-link::after { width: 100%; }
-
-.nav__actions { display: flex; align-items: center; gap: 18px; }
-
-.nav__phone {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--clr-dark);
-  transition: color 0.2s;
-}
-.nav__phone:hover { color: var(--clr-primary); }
-
-.nav__cta { padding: 11px 22px; font-size: 0.88rem; }
-
-.nav__toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  padding: 6px;
-}
-.nav__toggle span {
-  width: 24px; height: 2.5px;
-  background: var(--clr-dark);
-  border-radius: 2px;
-  transition: transform 0.3s, opacity 0.3s;
-}
-.nav__toggle.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
-.nav__toggle.open span:nth-child(2) { opacity: 0; }
-.nav__toggle.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
-
-/* ============================================================
-   Hero
-   ============================================================ */
-.hero {
-  position: relative;
-  padding: calc(var(--header-h) + 70px) 0 90px;
-  background: linear-gradient(165deg, var(--clr-bg-soft) 0%, var(--clr-bg) 55%, #F4EDDC 100%);
-  overflow: hidden;
-}
-
-.hero__blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.5;
-  pointer-events: none;
-}
-.hero__blob--1 { width: 420px; height: 420px; background: #E8DBB4; top: -120px; right: -100px; }
-.hero__blob--2 { width: 360px; height: 360px; background: #EFE5C6; bottom: -140px; left: -120px; }
-
-.hero__container {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  gap: 48px;
-}
-
-.hero__title {
-  font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5.4vw, 3.9rem);
-  font-weight: 600;
-  line-height: 1.12;
-  color: var(--clr-dark);
-  margin: 22px 0 20px;
-}
-
-.hero__text {
-  font-size: 1.1rem;
-  color: var(--clr-muted);
-  max-width: 520px;
-  margin-bottom: 14px;
-}
-
-.hero__arabic {
-  font-family: var(--font-arabic);
-  font-size: 1.25rem;
-  color: var(--clr-primary);
-  margin-bottom: 30px;
-}
-
-.hero__buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 44px; }
-
-.hero__badges { display: flex; gap: 36px; flex-wrap: wrap; }
-.hero__badge { display: flex; flex-direction: column; }
-.hero__badge strong { font-size: 1.3rem; color: var(--clr-dark); font-family: var(--font-display); }
-.hero__badge span { font-size: 0.83rem; color: var(--clr-muted); }
-
-/* Hero visual */
-.hero__visual { position: relative; display: flex; justify-content: center; }
-
-.hero__card-main {
-  position: relative;
-  width: min(380px, 80vw);
-  aspect-ratio: 1;
-  background: linear-gradient(145deg, #DEC57E, #C9A951 60%, #A8893B);
-  border-radius: 46% 54% 52% 48% / 48% 46% 54% 52%;
-  display: grid;
-  place-items: center;
-  box-shadow: var(--shadow-lg);
-  animation: blob-morph 9s ease-in-out infinite alternate;
-}
-
-@keyframes blob-morph {
-  0%   { border-radius: 46% 54% 52% 48% / 48% 46% 54% 52%; }
-  100% { border-radius: 54% 46% 44% 56% / 52% 56% 44% 48%; }
-}
-
-/* brightness(0) renders the emoji as a black silhouette, matching the brand mark */
-.hero__pet { font-size: clamp(7rem, 14vw, 10rem); transform: translateX(-8%); filter: brightness(0) drop-shadow(0 12px 18px rgba(0,0,0,0.3)); }
-.hero__pet--cat {
-  position: absolute;
-  font-size: clamp(3.4rem, 7vw, 4.6rem);
-  bottom: 8%; right: 10%;
-  transform: none;
-}
-
-.hero__ring {
-  position: absolute;
-  inset: -26px;
-  width: calc(100% + 52px);
-  height: calc(100% + 52px);
-  color: rgba(168, 137, 59, 0.45);
-  animation: spin 40s linear infinite;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-
-.float-card {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #fff;
-  border-radius: 14px;
-  padding: 11px 16px;
-  box-shadow: var(--shadow-md);
-  animation: floaty 5s ease-in-out infinite;
-}
-.float-card strong { display: block; font-size: 0.84rem; color: var(--clr-dark); line-height: 1.25; }
-.float-card small { color: var(--clr-muted); font-size: 0.74rem; }
-.float-card__icon { font-size: 1.4rem; filter: brightness(0); opacity: 0.8; }
-
-.float-card--1 { top: 4%; left: -2%; animation-delay: 0s; }
-.float-card--2 { bottom: 18%; left: -8%; animation-delay: 1.6s; }
-.float-card--3 { top: 30%; right: -6%; animation-delay: 3.2s; }
-
-@keyframes floaty {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-
-/* ============================================================
-   Stats
-   ============================================================ */
-.stats {
-  background: var(--clr-dark);
-  padding: 56px 0;
-}
-.stats__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-  text-align: center;
-}
-.stat h3 {
-  font-family: var(--font-display);
-  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
-  color: #fff;
-}
-.stat h3 span.counter { color: var(--clr-gold-light); }
-.stat p { color: rgba(255, 255, 255, 0.65); font-size: 0.92rem; margin-top: 4px; }
-
-/* ============================================================
-   Services
-   ============================================================ */
-.services__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-}
-
-.service-card {
-  background: #fff;
-  border: 1px solid #EAE4D6;
-  border-radius: var(--radius-lg);
-  padding: 36px 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
-}
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--clr-primary-light);
-}
-
-.service-card__icon {
-  width: 64px; height: 64px;
-  display: grid;
-  place-items: center;
-  font-size: 1.9rem;
-  background: var(--clr-bg-soft);
-  border-radius: 18px;
-  margin-bottom: 22px;
-  transition: transform 0.3s ease, background 0.3s;
-}
-/* silhouette icons keep the cards monochrome + gold */
-.service-card__icon span { filter: brightness(0); opacity: 0.82; }
-.service-card:hover .service-card__icon {
-  transform: rotate(-8deg) scale(1.08);
-  background: var(--clr-primary-light);
-}
-
-.service-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  color: var(--clr-dark);
-  margin-bottom: 10px;
-}
-.service-card p { color: var(--clr-muted); font-size: 0.95rem; margin-bottom: 18px; }
-
-.service-card__link {
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--clr-primary);
-  transition: gap 0.2s, color 0.2s;
-}
-.service-card__link:hover { color: var(--clr-primary-dark); }
-
-/* ============================================================
-   About
-   ============================================================ */
-.about { background: var(--clr-bg-soft); }
-
-.about__grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 64px;
-  align-items: center;
-}
-
-.about__img-card {
-  position: relative;
-  background: linear-gradient(150deg, #fff, #F1EAD8);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  aspect-ratio: 4/4.6;
-  display: grid;
-  place-items: center;
-}
-.about__emoji { font-size: clamp(5rem, 10vw, 7.5rem); filter: brightness(0); opacity: 0.9; }
-
-.about__experience {
-  position: absolute;
-  bottom: -24px; right: -18px;
-  background: var(--clr-accent);
-  color: var(--clr-dark);
-  padding: 18px 24px;
-  border-radius: 20px;
-  box-shadow: var(--shadow-md);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.about__experience strong { font-family: var(--font-display); font-size: 2rem; line-height: 1; }
-.about__experience span { font-size: 0.8rem; font-weight: 700; line-height: 1.3; }
-
-.about__content > p { color: var(--clr-muted); margin-bottom: 26px; }
-
-.about__list { margin-bottom: 34px; display: grid; gap: 13px; }
-.about__list li { display: flex; align-items: center; gap: 12px; font-weight: 600; color: var(--clr-dark); }
-.about__list li span {
-  flex: none;
-  width: 26px; height: 26px;
-  border-radius: 50%;
-  background: var(--clr-dark);
-  color: var(--clr-gold-light);
-  display: grid;
-  place-items: center;
-  font-size: 0.8rem;
-}
-
-/* ============================================================
-   Team
-   ============================================================ */
-.team__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.team-card {
-  background: #fff;
-  border: 1px solid #EAE4D6;
-  border-radius: var(--radius-lg);
-  padding: 34px 24px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.team-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
-
-.team-card__avatar {
-  width: 92px; height: 92px;
-  margin: 0 auto 18px;
-  border-radius: 50%;
-  background: var(--av, var(--clr-dark));
-  color: var(--clr-gold-light);
-  border: 2px solid var(--clr-accent);
-  font-family: var(--font-display);
-  font-size: 1.7rem;
-  font-weight: 700;
-  display: grid;
-  place-items: center;
-  box-shadow: var(--shadow-sm);
-}
-
-.team-card h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--clr-dark); }
-.team-card__role {
-  display: block;
-  color: var(--clr-primary);
-  font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin: 6px 0 12px;
-}
-.team-card p { color: var(--clr-muted); font-size: 0.88rem; }
-
-/* ============================================================
-   Testimonials
-   ============================================================ */
-.testimonials { background: var(--clr-bg-soft); }
-
-.slider {
-  max-width: 760px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.slider__track {
-  display: flex;
-  transition: transform 0.55s cubic-bezier(0.65, 0, 0.35, 1);
-}
-
-.slide {
-  flex: 0 0 100%;
-  background: #fff;
-  border-radius: var(--radius-lg);
-  padding: 46px 50px;
-  box-shadow: var(--shadow-sm);
-  text-align: center;
-}
-.slide__stars { color: var(--clr-accent); font-size: 1.25rem; letter-spacing: 4px; margin-bottom: 18px; }
-.slide p {
-  font-family: var(--font-display);
-  font-size: clamp(1.05rem, 2vw, 1.3rem);
-  color: var(--clr-dark);
-  line-height: 1.55;
-  margin-bottom: 22px;
-}
-.slide footer strong { color: var(--clr-dark); }
-.slide footer span { color: var(--clr-muted); font-size: 0.9rem; }
-
-.slider__controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 22px;
-  margin-top: 30px;
-}
-
-.slider__btn {
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  border: 2px solid #DCD4C2;
-  background: #fff;
-  color: var(--clr-dark);
-  font-size: 1.1rem;
-  transition: all 0.2s;
-}
-.slider__btn:hover { background: var(--clr-primary); border-color: var(--clr-primary); color: #fff; }
-
-.slider__dots { display: flex; gap: 9px; }
-.slider__dot {
-  width: 9px; height: 9px;
-  border-radius: 50%;
-  border: none;
-  background: #CFC8B6;
-  transition: all 0.25s;
-  padding: 0;
-}
-.slider__dot.active { background: var(--clr-primary); width: 26px; border-radius: 100px; }
-
-/* ============================================================
-   Appointment
-   ============================================================ */
-.appointment {
-  background: linear-gradient(150deg, #0E0D0A, #2A2519 80%);
-  color: #fff;
-}
-
-.appointment__grid {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 64px;
-  align-items: start;
-}
-
-.appointment .section__title { color: #fff; }
-.appointment__info > p { color: rgba(255, 255, 255, 0.75); margin-bottom: 34px; }
-
-.appointment__hours {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius);
-  padding: 26px 28px;
-}
-.appointment__hours h4 { margin-bottom: 16px; font-size: 1.02rem; }
-.appointment__hours li {
-  display: flex;
-  justify-content: space-between;
-  padding: 9px 0;
-  font-size: 0.93rem;
-  color: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
-}
-.appointment__hours li:last-child { border-bottom: none; }
-.appointment__emergency { color: var(--clr-gold-light) !important; font-weight: 700; }
-
-.appointment__form {
-  background: #fff;
-  border-radius: var(--radius-lg);
-  padding: 40px 38px;
-  box-shadow: var(--shadow-lg);
-  color: var(--clr-text);
-}
-.appointment__form h3 {
-  font-family: var(--font-display);
-  color: var(--clr-dark);
-  font-size: 1.5rem;
-  margin-bottom: 24px;
-}
-
-.form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.form__group { margin-bottom: 16px; }
-.form__group label {
-  display: block;
-  font-weight: 700;
-  font-size: 0.83rem;
-  color: var(--clr-dark);
-  margin-bottom: 7px;
-}
-.form__group input,
-.form__group select,
-.form__group textarea {
-  width: 100%;
-  font-family: inherit;
-  font-size: 0.93rem;
-  color: var(--clr-text);
-  padding: 12px 15px;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 12px;
-  background: #f8fafc;
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
-}
-.form__group input:focus,
-.form__group select:focus,
-.form__group textarea:focus {
-  border-color: var(--clr-primary);
-  background: #fff;
-  box-shadow: 0 0 0 4px rgba(168, 137, 59, 0.14);
-}
-.form__group input.error,
-.form__group select.error { border-color: #ef4444; background: #fef2f2; }
-.form__group textarea { resize: vertical; }
-
-.form__success {
-  margin-top: 16px;
-  background: #ecfdf5;
-  color: #047857;
-  font-weight: 600;
-  font-size: 0.92rem;
-  padding: 13px 16px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-/* ============================================================
-   Contact
-   ============================================================ */
-.contact { padding-bottom: 80px; }
-.contact__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-}
-
-.contact-card {
-  background: #fff;
-  border: 1px solid #EAE4D6;
-  border-radius: var(--radius-lg);
-  padding: 36px 28px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.contact-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-.contact-card__icon { font-size: 2.1rem; display: block; margin-bottom: 14px; filter: brightness(0); opacity: 0.85; }
-.contact-card h4 { font-family: var(--font-display); color: var(--clr-dark); font-size: 1.15rem; margin-bottom: 8px; }
-.contact-card p, .contact-card a { color: var(--clr-muted); font-size: 0.95rem; }
-.contact-card a:hover { color: var(--clr-primary); }
-
-/* ============================================================
-   Footer
-   ============================================================ */
-.footer { background: #0E0D0A; color: rgba(255, 255, 255, 0.72); }
-
-.footer__grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  gap: 40px;
-  padding: 64px 0 48px;
-}
-
-.nav__logo--footer { color: #fff; margin-bottom: 10px; }
-.footer__brand p { font-size: 0.92rem; max-width: 280px; }
-.footer__arabic { font-family: var(--font-arabic); color: var(--clr-gold-light); font-size: 1.1rem; margin-bottom: 10px; }
-
-.footer__col h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; }
-.footer__col a {
-  display: block;
-  font-size: 0.92rem;
-  padding: 5px 0;
-  transition: color 0.2s, transform 0.2s;
-}
-.footer__col a:hover { color: var(--clr-gold-light); }
-
-.footer__bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 22px 0;
-  text-align: center;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-/* ===== Scroll-to-top ===== */
-.scroll-top {
-  position: fixed;
-  right: 24px; bottom: 24px;
-  width: 48px; height: 48px;
-  border-radius: 50%;
-  background: var(--clr-dark);
-  color: var(--clr-gold-light);
-  font-size: 1.2rem;
-  display: grid;
-  place-items: center;
-  box-shadow: var(--shadow-md);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px);
-  transition: all 0.3s ease;
-  z-index: 90;
-}
-.scroll-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
-.scroll-top:hover { background: var(--clr-primary-dark); }
-
-/* ===== Reveal animations ===== */
-.reveal {
-  opacity: 0;
-  transform: translateY(34px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.delay-1 { transition-delay: 0.12s; }
-.delay-2 { transition-delay: 0.24s; }
-.delay-3 { transition-delay: 0.36s; }
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; }
-}
-
-/* ============================================================
-   Responsive
-   ============================================================ */
-@media (max-width: 1024px) {
-  .hero__container { grid-template-columns: 1fr; text-align: center; }
-  .hero__content { display: flex; flex-direction: column; align-items: center; }
-  .hero__visual { margin-top: 30px; }
-  .float-card--1 { left: 2%; }
-  .float-card--2 { left: 0; }
-  .float-card--3 { right: 0; }
-
-  .services__grid { grid-template-columns: repeat(2, 1fr); }
-  .team__grid { grid-template-columns: repeat(2, 1fr); }
-  .about__grid, .appointment__grid { grid-template-columns: 1fr; gap: 48px; }
-  .about__visual { max-width: 420px; margin-inline: auto; }
-  .footer__grid { grid-template-columns: 1fr 1fr; }
-  .nav__phone { display: none; }
-}
-
-@media (max-width: 768px) {
-  .section { padding: 72px 0; }
-
-  .nav__menu {
-    position: fixed;
-    top: var(--header-h);
-    left: 0; right: 0;
-    background: #fff;
-    flex-direction: column;
-    gap: 0;
-    padding: 16px 0 22px;
-    box-shadow: var(--shadow-md);
-    transform: translateY(-130%);
-    transition: transform 0.35s ease;
-    z-index: -1;
-  }
-  .nav__menu.open { transform: translateY(0); }
-  .nav__menu li { text-align: center; }
-  .nav__link { display: block; padding: 13px 0; }
-  .nav__link::after { display: none; }
-
-  .nav__toggle { display: flex; }
-  .nav__cta { display: none; }
-
-  .stats__grid { grid-template-columns: repeat(2, 1fr); }
-  .services__grid { grid-template-columns: 1fr; }
-  .team__grid { grid-template-columns: 1fr; max-width: 380px; margin-inline: auto; }
-  .contact__grid { grid-template-columns: 1fr; }
-  .form__row { grid-template-columns: 1fr; gap: 0; }
-
-  .slide { padding: 36px 26px; }
-  .appointment__form { padding: 30px 22px; }
-  .about__experience { right: 6px; }
-
-  .float-card { padding: 8px 12px; }
-  .float-card strong { font-size: 0.76rem; }
-  .float-card small { font-size: 0.68rem; }
-}
-
-@media (max-width: 480px) {
-  .hero__badges { gap: 22px; justify-content: center; }
-  .footer__grid { grid-template-columns: 1fr; gap: 30px; }
-  .hero__buttons { justify-content: center; }
-}
-
-  </style>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>" />
+  <title>Premier Pets Clinic — Veterinary Care in Doha, Qatar</title>
+  <meta name="description" content="Premier Pets Clinic in Doha offers wellness exams, vaccinations, dental care, surgery and grooming for cats and dogs. Open Saturday–Thursday, 9 AM – 10 PM. Book an appointment online." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 130'%3E%3Crect width='130' height='130' rx='26' fill='%2316151A'/%3E%3Cg transform='translate(15,11)' fill='none' stroke='%23BE9B45' stroke-linecap='round'%3E%3Ccircle cx='50' cy='11' r='7' fill='%23E3C56E' stroke='none'/%3E%3Cpath d='M50 100 L16 46 M50 100 L84 46' stroke-width='9'/%3E%3Cpath d='M50 18 L50 100' stroke-width='7'/%3E%3Cpath d='M50 24 C36 33 64 44 50 54 C36 64 64 75 50 86' stroke-width='6.5' stroke='%23E3C56E'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/fonts.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#home" class="nav__logo">
-        <svg class="nav__logo-mark" viewBox="0 0 44 44" aria-hidden="true">
-          <circle cx="22" cy="22" r="21" fill="#16140F"/>
-          <g stroke="#C9A951" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 11 L22 31 L30 11"/>
-            <path d="M14.5 18.5 C18.5 15.5 25.5 21.5 29.5 18.5"/>
-            <path d="M22 31 L22 36"/>
-          </g>
+  <!-- ===== Header (shared across all pages) ===== -->
+  <header class="header">
+    <nav class="nav container" aria-label="Main">
+      <a href="index.html" class="brand" aria-label="Premier Pets Clinic — home">
+        <svg viewBox="0 0 100 130" width="28" height="36" fill="none" aria-hidden="true">
+          <circle cx="50" cy="11" r="6.5" fill="url(#cad-h)"/>
+          <path d="M50 100 L16 46 M50 100 L84 46" stroke="url(#cad-h)" stroke-width="6" stroke-linecap="round"/>
+          <path d="M50 18 L50 100" stroke="url(#cad-h)" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M50 24 C36 33 64 44 50 54 C36 64 64 75 50 86" stroke="url(#cad-h)" stroke-width="4" stroke-linecap="round"/>
+          <defs><linearGradient id="cad-h" x1="18" y1="8" x2="82" y2="115" gradientUnits="userSpaceOnUse"><stop stop-color="#E3C56E"/><stop offset="1" stop-color="#BE9B45"/></linearGradient></defs>
         </svg>
-        <span class="nav__logo-text">Premier Pets Clinic</span>
+        <span class="brand__text">
+          <span class="brand__en">Premier Pets Clinic</span>
+          <span class="brand__ar" lang="ar" dir="rtl">بريمير بيتس كلينك</span>
+        </span>
       </a>
 
-      <ul class="nav__menu" id="nav-menu">
-        <li><a href="#home" class="nav__link active-link">Home</a></li>
-        <li><a href="#services" class="nav__link">Services</a></li>
-        <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#team" class="nav__link">Our Vets</a></li>
-        <li><a href="#testimonials" class="nav__link">Reviews</a></li>
-        <li><a href="#contact" class="nav__link">Contact</a></li>
+      <ul class="nav__menu">
+        <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
+        <li><a class="nav__link" href="services.html">Services</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
       </ul>
 
       <div class="nav__actions">
         <a href="tel:30011105" class="nav__phone">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           <span>3001 1105</span>
         </a>
-        <a href="#appointment" class="btn btn--primary nav__cta">Book a Visit</a>
-        <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+        <a href="contact.html" class="btn btn--gold nav__cta">Book<span class="nav__cta-long">&nbsp;Appointment</span></a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-panel">
           <span></span><span></span><span></span>
         </button>
       </div>
     </nav>
+
+    <div class="nav__panel" id="nav-panel">
+      <div class="container">
+        <ul>
+          <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav__link" href="services.html">Services &amp; Pricing</a></li>
+          <li><a class="nav__link" href="about.html">About &amp; Team</a></li>
+          <li><a class="nav__link" href="contact.html">Contact &amp; Booking</a></li>
+        </ul>
+        <div class="nav__panel-meta">
+          <a href="tel:30011105"><strong>Call 3001 1105</strong></a>
+          <span>Saturday – Thursday, 9:00 AM – 10:00 PM · Friday closed</span>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
     <!-- ===== Hero ===== -->
-    <section class="hero" id="home">
-      <div class="hero__blob hero__blob--1"></div>
-      <div class="hero__blob hero__blob--2"></div>
-      <div class="container hero__container">
-        <div class="hero__content reveal">
-          <span class="tag">Dubai's trusted veterinary care</span>
-          <h1 class="hero__title">
-            Compassionate care for <span class="highlight">every paw</span>, claw &amp; tail
-          </h1>
-          <p class="hero__text">
-            Appointments, vaccinations, and routine care for cats and dogs —
-            delivered with the warmth and excellence your companions deserve.
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="label">Veterinary clinic · Doha, Qatar</span>
+          <h1>Gentle care for the ones who can’t tell you where it hurts</h1>
+          <p class="lead hero__lead">
+            Wellness exams, vaccinations, dental care and surgery for cats and dogs —
+            with a written estimate before any treatment begins.
           </p>
-          <p class="hero__arabic" lang="ar" dir="rtl">بريمير بيتس كلينك</p>
-          <div class="hero__buttons">
-            <a href="#appointment" class="btn btn--primary btn--lg">
-              Book an Appointment
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <p class="hero__ar" lang="ar" dir="rtl">بريمير بيتس كلينك — رعاية بيطرية في الدوحة</p>
+          <div class="hero__cta">
+            <a href="contact.html" class="btn btn--gold btn--lg">Book Appointment</a>
+            <a href="tel:30011105" class="btn btn--ghost btn--lg">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              3001 1105
             </a>
-            <a href="#services" class="btn btn--ghost btn--lg">Explore Services</a>
           </div>
-          <div class="hero__badges">
-            <div class="hero__badge"><strong>★ 4.9</strong><span>1,400+ reviews</span></div>
-            <div class="hero__badge"><strong>9–10</strong><span>Open daily, Fri off</span></div>
-            <div class="hero__badge"><strong>15+</strong><span>Years of service</span></div>
-          </div>
+          <p class="hero__note"><strong>Open Saturday – Thursday, 9:00 AM – 10:00 PM</strong> · Walk-ins welcome</p>
         </div>
 
-        <div class="hero__visual reveal delay-2">
-          <div class="hero__card-main">
-            <div class="hero__pet">🐕</div>
-            <div class="hero__pet hero__pet--cat">🐈</div>
-            <svg class="hero__ring" viewBox="0 0 200 200">
-              <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 10" />
-            </svg>
+        <div class="hero__visual reveal">
+          <div class="hero__frame">
+            <img src="assets/logo.jpg" alt="Premier Pets Clinic — black cat and dog flanking a gold veterinary caduceus, with the bilingual wordmark" width="900" height="900" />
           </div>
-          <div class="float-card float-card--1">
-            <span class="float-card__icon">💉</span>
-            <div><strong>Vaccination</strong><small>Up to date ✓</small></div>
-          </div>
-          <div class="float-card float-card--2">
-            <span class="float-card__icon">❤️</span>
-            <div><strong>Heart Rate</strong><small>Healthy — 78 bpm</small></div>
-          </div>
-          <div class="float-card float-card--3">
-            <span class="float-card__icon">📅</span>
-            <div><strong>Next Visit</strong><small>Annual wellness exam</small></div>
+          <div class="hero__badge">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#E3C56E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div><strong>Fear-free handling</strong><small>Trained, patient team</small></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== Stats ===== -->
-    <section class="stats">
+    <!-- ===== Trust strip ===== -->
+    <!-- TODO: replace with real detail — confirm these figures with the clinic -->
+    <section class="stats" aria-label="Clinic at a glance">
       <div class="container stats__grid">
-        <div class="stat reveal"><h3><span class="counter" data-target="12000">0</span>+</h3><p>Happy Patients</p></div>
-        <div class="stat reveal delay-1"><h3><span class="counter" data-target="15">0</span>+</h3><p>Years of Experience</p></div>
-        <div class="stat reveal delay-2"><h3><span class="counter" data-target="9">0</span></h3><p>Expert Veterinarians</p></div>
-        <div class="stat reveal delay-3"><h3><span class="counter" data-target="98">0</span>%</h3><p>Recovery Success Rate</p></div>
+        <div class="stat"><h3>15+</h3><p>Years caring for pets</p></div>
+        <div class="stat"><h3>12,000+</h3><p>Pets treated</p></div>
+        <div class="stat"><h3>4.9 ★</h3><p>From 1,400+ reviews</p></div>
+        <div class="stat"><h3>Walk-ins</h3><p>Welcome every open day</p></div>
       </div>
     </section>
 
-    <!-- ===== Services ===== -->
-    <section class="section services" id="services">
+    <!-- ===== Services preview ===== -->
+    <section class="section">
       <div class="container">
-        <div class="section__header reveal">
-          <span class="tag">Our Services</span>
-          <h2 class="section__title">Complete care, from nose to tail</h2>
-          <p class="section__subtitle">Everything your companion needs under one roof — delivered with skill, patience and plenty of treats.</p>
+        <div class="section-head reveal">
+          <span class="label">Our services</span>
+          <h2>Everything your pet needs, under one roof</h2>
+          <p>Plain answers, clear prices, and a team that explains every step before it happens.</p>
         </div>
 
-        <div class="services__grid">
-          <article class="service-card reveal">
-            <div class="service-card__icon"><span>🩺</span></div>
-            <h3>Wellness Exams</h3>
-            <p>Thorough nose-to-tail check-ups to catch problems early and keep your pet thriving at every life stage.</p>
-            <a href="#appointment" class="service-card__link">Book now →</a>
-          </article>
-          <article class="service-card reveal delay-1">
-            <div class="service-card__icon"><span>💉</span></div>
+        <div class="cards-grid">
+          <a class="card reveal" href="services.html#wellness">
+            <span class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h-.5A2.5 2.5 0 0 0 2 4.5v4a6 6 0 0 0 12 0v-4A2.5 2.5 0 0 0 11.5 2H11"/><path d="M8 14.5V16a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-3.5"/><circle cx="20" cy="10" r="2.3"/></svg></span>
+            <h3>Wellness exams</h3>
+            <p>Nose-to-tail check-ups that catch problems before they grow.</p>
+            <span class="card__go">Learn more
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+          <a class="card reveal d1" href="services.html#vaccinations">
+            <span class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/></svg></span>
             <h3>Vaccinations</h3>
-            <p>Tailored vaccine plans that protect against rabies, parvo, distemper and other preventable diseases.</p>
-            <a href="#appointment" class="service-card__link">Book now →</a>
-          </article>
-          <article class="service-card reveal delay-2">
-            <div class="service-card__icon"><span>🦷</span></div>
-            <h3>Dental Care</h3>
-            <p>Professional cleanings, digital dental X-rays and extractions for fresh breath and pain-free chewing.</p>
-            <a href="#appointment" class="service-card__link">Book now →</a>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-card__icon"><span>🏥</span></div>
+            <p>Protection against rabies, parvo, distemper and more — on a simple schedule.</p>
+            <span class="card__go">Learn more
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+          <a class="card reveal d2" href="services.html#dental">
+            <span class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3C5.5 3 4 5 4 7.5c0 3.5 1.8 4.5 2.2 7.5.3 2.3.8 6 2.3 6 1.7 0 1.3-3.4 2-5.5.4-1.3 2.6-1.3 3 0 .7 2.1.3 5.5 2 5.5 1.5 0 2-3.7 2.3-6 .4-3 2.2-4 2.2-7.5C20 5 18.5 3 16 3c-1.6 0-2.4.8-4 .8S9.6 3 8 3Z"/></svg></span>
+            <h3>Dental care</h3>
+            <p>Teeth cleaning that prevents pain, infection and bad breath.</p>
+            <span class="card__go">Learn more
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+          <a class="card reveal" href="services.html#surgery">
+            <span class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></span>
             <h3>Surgery</h3>
-            <p>From routine spay &amp; neuter to advanced soft-tissue procedures in our state-of-the-art surgical suite.</p>
-            <a href="#appointment" class="service-card__link">Book now →</a>
-          </article>
-          <article class="service-card reveal delay-1">
-            <div class="service-card__icon"><span>🚑</span></div>
-            <h3>Emergency Care</h3>
-            <p>Accidents happen. Our emergency team is ready throughout opening hours — call 3001 1105 and come straight in.</p>
-            <a href="#appointment" class="service-card__link">Book now →</a>
-          </article>
-          <article class="service-card reveal delay-2">
-            <div class="service-card__icon"><span>✂️</span></div>
-            <h3>Grooming &amp; Spa</h3>
-            <p>Baths, trims, nail care and de-shedding treatments that leave your pet looking — and feeling — fabulous.</p>
-            <a href="#appointment" class="service-card__link">Book now →</a>
-          </article>
+            <p>From routine spay and neuter to soft-tissue procedures.</p>
+            <span class="card__go">Learn more
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+          <a class="card reveal d1" href="services.html#emergency">
+            <span class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg></span>
+            <h3>Emergency care</h3>
+            <p>Call 3001 1105 and come straight in during opening hours.</p>
+            <span class="card__go">Learn more
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+          <a class="card reveal d2" href="services.html#grooming">
+            <span class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/></svg></span>
+            <h3>Grooming &amp; spa</h3>
+            <p>Baths, trims and nail care by patient, practised hands.</p>
+            <span class="card__go">Learn more
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ===== About ===== -->
-    <section class="section about" id="about">
-      <div class="container about__grid">
-        <div class="about__visual reveal">
-          <div class="about__img-card">
-            <span class="about__emoji">🐶🐱</span>
-            <div class="about__experience">
-              <strong>15+</strong>
-              <span>Years caring<br/>for pets</span>
-            </div>
+    <!-- ===== Why pet parents choose us ===== -->
+    <section class="section section--bone">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="label">Why pet parents choose us</span>
+          <h2>Calm for them. Clear for you.</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why reveal">
+            <span class="why__icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><circle cx="7" cy="7.2" r="1.9"/><circle cx="12" cy="5.6" r="2"/><circle cx="17" cy="7.2" r="1.9"/><circle cx="19.6" cy="11.2" r="1.6"/><circle cx="4.4" cy="11.2" r="1.6"/><path d="M12 10.6c-2.9 0-5.6 2.3-5.6 5.1 0 1.9 1.5 3.1 3.2 3.1.9 0 1.6-.4 2.4-.4s1.5.4 2.4.4c1.7 0 3.2-1.2 3.2-3.1 0-2.8-2.7-5.1-5.6-5.1Z"/></svg></span>
+            <h3>Gentle, fear-free handling</h3>
+            <p>Separate cat and dog waiting areas, unhurried appointments, and a team trained to keep anxious pets calm.</p>
+          </div>
+          <div class="why reveal d1">
+            <span class="why__icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.6 2H3a1 1 0 0 0-1 1v9.6a1 1 0 0 0 .3.7l8.4 8.4a1 1 0 0 0 1.4 0l9.6-9.6a1 1 0 0 0 0-1.4L13.3 2.3a1 1 0 0 0-.7-.3Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span>
+            <h3>Transparent pricing</h3>
+            <p>You approve a written estimate before we begin any treatment. No surprises at the front desk — ever.</p>
+          </div>
+          <div class="why reveal d2">
+            <span class="why__icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg></span>
+            <h3>In-house diagnostics</h3>
+            <p>Lab, ultrasound and digital X-ray under one roof, so most answers arrive during the same visit.</p>
           </div>
         </div>
-        <div class="about__content reveal delay-1">
-          <span class="tag">Why Premier Pets</span>
-          <h2 class="section__title">Medicine with heart, science with soul</h2>
-          <p>
-            Premier Pets Clinic began with one simple belief: every animal deserves
-            the same standard of care we'd want for ourselves. Today our fear-free
-            Dubai clinic blends cutting-edge diagnostics with good old-fashioned
-            kindness — serving pet families in English and Arabic.
-          </p>
-          <ul class="about__list">
-            <li><span>✓</span> Fear-Free certified handling for anxious pets</li>
-            <li><span>✓</span> In-house lab, ultrasound &amp; digital X-ray</li>
-            <li><span>✓</span> Transparent pricing — estimates before treatment</li>
-            <li><span>✓</span> Separate cat &amp; dog waiting areas</li>
-            <li><span>✓</span> Care in English &amp; Arabic — نتحدث العربية</li>
-          </ul>
-          <a href="#team" class="btn btn--primary">Meet Our Team</a>
-        </div>
       </div>
     </section>
 
-    <!-- ===== Team ===== -->
-    <section class="section team" id="team">
+    <!-- ===== Meet the vets preview ===== -->
+    <section class="section">
       <div class="container">
-        <div class="section__header reveal">
-          <span class="tag">Our Vets</span>
-          <h2 class="section__title">The humans behind the healing</h2>
-          <p class="section__subtitle">Board-certified veterinarians who genuinely love what they do.</p>
+        <div class="section-head reveal">
+          <span class="label">Our veterinarians</span>
+          <h2>The people your pet will actually meet</h2>
+          <p>Board-certified, bilingual, and genuinely fond of their patients.</p>
         </div>
-        <div class="team__grid">
+        <!-- TODO: replace with real detail — placeholder vet names; swap avatars for real headshots -->
+        <div class="team-grid">
           <article class="team-card reveal">
-            <div class="team-card__avatar" style="--av: linear-gradient(135deg,#2A2519,#16140F)">SM</div>
+            <div class="team-card__avatar" aria-hidden="true">SM</div>
             <h3>Dr. Sarah Mitchell</h3>
             <span class="team-card__role">Chief Veterinarian · Surgery</span>
-            <p>20 years of surgical expertise and an uncanny ability to win over even the grumpiest cats.</p>
+            <p>Twenty years of surgical expertise and an uncanny ability to win over even the grumpiest cats.</p>
           </article>
-          <article class="team-card reveal delay-1">
-            <div class="team-card__avatar" style="--av: linear-gradient(135deg,#D9BE74,#A8893B)">JR</div>
+          <article class="team-card reveal d1">
+            <div class="team-card__avatar" aria-hidden="true">JR</div>
             <h3>Dr. James Rodriguez</h3>
             <span class="team-card__role">Internal Medicine</span>
-            <p>Our diagnostic detective — if something's wrong, Dr. Rodriguez will get to the bottom of it.</p>
+            <p>The clinic’s diagnostic detective — if something is wrong, he will get to the bottom of it.</p>
           </article>
-          <article class="team-card reveal delay-2">
-            <div class="team-card__avatar" style="--av: linear-gradient(135deg,#2A2519,#16140F)">AC</div>
+          <article class="team-card reveal d2">
+            <div class="team-card__avatar" aria-hidden="true">AC</div>
             <h3>Dr. Amara Chen</h3>
             <span class="team-card__role">Dentistry &amp; Exotic Pets</span>
-            <p>From parrot beaks to bulldog molars, Dr. Chen keeps every smile in the animal kingdom bright.</p>
-          </article>
-          <article class="team-card reveal delay-3">
-            <div class="team-card__avatar" style="--av: linear-gradient(135deg,#D9BE74,#A8893B)">EP</div>
-            <h3>Dr. Elena Petrova</h3>
-            <span class="team-card__role">Emergency &amp; Critical Care</span>
-            <p>Calm under pressure and ready when it matters most — every day we're open.</p>
+            <p>From parrot beaks to bulldog molars, she keeps every smile in the animal kingdom healthy.</p>
           </article>
         </div>
+        <p style="text-align:center; margin-top: var(--s-6);">
+          <a href="about.html" class="btn btn--ghost">Meet the whole team</a>
+        </p>
       </div>
     </section>
 
     <!-- ===== Testimonials ===== -->
-    <section class="section testimonials" id="testimonials">
+    <section class="section section--bone">
       <div class="container">
-        <div class="section__header reveal">
-          <span class="tag">Reviews</span>
-          <h2 class="section__title">Wagging tails &amp; happy humans</h2>
+        <div class="section-head reveal">
+          <span class="label">From our pet parents</span>
+          <h2>Wagging tails, honest words</h2>
         </div>
-
-        <div class="slider reveal" id="slider">
-          <div class="slider__track" id="slider-track">
-            <blockquote class="slide">
-              <div class="slide__stars">★★★★★</div>
-              <p>"When our beagle Max swallowed a sock, Premier Pets' emergency team saved his life. They called us with updates every few hours. I'll never go anywhere else."</p>
-              <footer><strong>Rachel T.</strong><span> · Max's mom 🐕</span></footer>
-            </blockquote>
-            <blockquote class="slide">
-              <div class="slide__stars">★★★★★</div>
-              <p>"My cat Luna is terrified of vets, but the fear-free handling here is real. She actually purred during her exam. I didn't know that was possible."</p>
-              <footer><strong>Daniel K.</strong><span> · Luna's dad 🐈</span></footer>
-            </blockquote>
-            <blockquote class="slide">
-              <div class="slide__stars">★★★★★</div>
-              <p>"Transparent pricing, zero upselling, and a team that remembers my dog's name every single visit. Premier Pets sets the standard for what a vet clinic should be."</p>
-              <footer><strong>Priya S.</strong><span> · Biscuit's mom 🐩</span></footer>
-            </blockquote>
-          </div>
-          <div class="slider__controls">
-            <button class="slider__btn" id="prev-btn" aria-label="Previous review">←</button>
-            <div class="slider__dots" id="slider-dots"></div>
-            <button class="slider__btn" id="next-btn" aria-label="Next review">→</button>
-          </div>
+        <div class="quotes-grid">
+          <blockquote class="quote reveal">
+            <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“When our beagle Max swallowed a sock, the emergency team saved his life — and called us with updates every few hours. I’ll never go anywhere else.”</p>
+            <footer>
+              <!-- TODO: replace with real detail — pet photo thumbnails -->
+              <span class="quote__pet" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="7" cy="7.2" r="1.7"/><circle cx="12" cy="5.8" r="1.8"/><circle cx="17" cy="7.2" r="1.7"/><path d="M12 10.8c-2.6 0-5 2-5 4.6 0 1.7 1.3 2.8 2.9 2.8.8 0 1.4-.4 2.1-.4s1.3.4 2.1.4c1.6 0 2.9-1.1 2.9-2.8 0-2.6-2.4-4.6-5-4.6Z"/></svg></span>
+              <div><strong>Rachel T. &amp; Max</strong><span>Beagle · emergency visit</span></div>
+            </footer>
+          </blockquote>
+          <blockquote class="quote reveal d1">
+            <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“My cat Luna is terrified of vets, but the fear-free handling here is real. She actually purred during her exam. I didn’t know that was possible.”</p>
+            <footer>
+              <span class="quote__pet" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 6.5c-1.8 0-2.6.9-3.4.9-.6 0-2-.9-2.6-.4-.6.6.2 2.3.2 3.1 0 .5-.7 1.5-.7 3 0 3.2 2.9 5.4 6.5 5.4s6.5-2.2 6.5-5.4c0-1.5-.7-2.5-.7-3 0-.8.8-2.5.2-3.1-.6-.5-2 .4-2.6.4-.8 0-1.6-.9-3.4-.9Z"/></svg></span>
+              <div><strong>Daniel K. &amp; Luna</strong><span>Domestic shorthair · wellness exam</span></div>
+            </footer>
+          </blockquote>
+          <blockquote class="quote reveal d2">
+            <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“Transparent pricing, zero upselling, and a team that remembers my dog’s name on every single visit. This is what a vet clinic should be.”</p>
+            <footer>
+              <span class="quote__pet" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="7" cy="7.2" r="1.7"/><circle cx="12" cy="5.8" r="1.8"/><circle cx="17" cy="7.2" r="1.7"/><path d="M12 10.8c-2.6 0-5 2-5 4.6 0 1.7 1.3 2.8 2.9 2.8.8 0 1.4-.4 2.1-.4s1.3.4 2.1.4c1.6 0 2.9-1.1 2.9-2.8 0-2.6-2.4-4.6-5-4.6Z"/></svg></span>
+              <div><strong>Priya S. &amp; Biscuit</strong><span>Toy poodle · dental care</span></div>
+            </footer>
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <!-- ===== Appointment ===== -->
-    <section class="section appointment" id="appointment">
-      <div class="container appointment__grid">
-        <div class="appointment__info reveal">
-          <span class="tag tag--light">Book a Visit</span>
-          <h2 class="section__title">Ready when your pet needs us</h2>
-          <p>Fill in the form and our front desk will confirm your appointment within one business hour. For emergencies, please call us directly.</p>
-          <div class="appointment__hours">
-            <h4>🕐 Opening Hours</h4>
-            <ul>
-              <li><span>Saturday – Thursday</span><span>9:00 AM – 10:00 PM</span></li>
-              <li><span>Friday</span><span>Closed</span></li>
-              <li class="appointment__emergency"><span>Emergency</span><span>Call 3001 1105</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <form class="appointment__form reveal delay-1" id="appointment-form" novalidate>
-          <h3>Book an Appointment</h3>
-          <div class="form__row">
-            <div class="form__group">
-              <label for="owner-name">Your Name *</label>
-              <input type="text" id="owner-name" name="ownerName" placeholder="Jane Doe" required />
-            </div>
-            <div class="form__group">
-              <label for="phone">Phone *</label>
-              <input type="tel" id="phone" name="phone" placeholder="3001 1105" required />
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="form__group">
-              <label for="pet-name">Pet's Name *</label>
-              <input type="text" id="pet-name" name="petName" placeholder="Buddy" required />
-            </div>
-            <div class="form__group">
-              <label for="pet-type">Pet Type *</label>
-              <select id="pet-type" name="petType" required>
-                <option value="" disabled selected>Select…</option>
-                <option>Dog</option>
-                <option>Cat</option>
-                <option>Bird</option>
-                <option>Rabbit</option>
-                <option>Reptile</option>
-                <option>Other</option>
-              </select>
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="form__group">
-              <label for="service">Service *</label>
-              <select id="service" name="service" required>
-                <option value="" disabled selected>Select…</option>
-                <option>Wellness Exam</option>
-                <option>Vaccination</option>
-                <option>Dental Care</option>
-                <option>Surgery Consultation</option>
-                <option>Grooming &amp; Spa</option>
-                <option>Emergency</option>
-              </select>
-            </div>
-            <div class="form__group">
-              <label for="date">Preferred Date *</label>
-              <input type="date" id="date" name="date" required />
-            </div>
-          </div>
-          <div class="form__group">
-            <label for="notes">Notes for the vet</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Anything we should know about your pet…"></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--lg btn--full">Confirm Booking 🐾</button>
-          <p class="form__success" id="form-success" hidden>✅ Thank you! Your request was received — we'll call you shortly to confirm.</p>
-        </form>
-      </div>
-    </section>
-
-    <!-- ===== Contact / Map ===== -->
-    <section class="section contact" id="contact">
+    <!-- ===== Final CTA band ===== -->
+    <section class="cta-band">
       <div class="container">
-        <div class="contact__grid">
-          <div class="contact-card reveal">
-            <span class="contact-card__icon">📍</span>
-            <h4>Visit Us</h4>
-            <p>Al Wasl Road, Jumeirah<br/>Dubai, UAE</p>
-          </div>
-          <div class="contact-card reveal delay-1">
-            <span class="contact-card__icon">📞</span>
-            <h4>Call Us</h4>
-            <p><a href="tel:30011105">3001 1105</a><br/>Sat – Thu, 9 AM – 10 PM</p>
-          </div>
-          <div class="contact-card reveal delay-2">
-            <span class="contact-card__icon">✉️</span>
-            <h4>Email Us</h4>
-            <p><a href="mailto:hello@premierpetsclinic.com">hello@premierpetsclinic.com</a><br/><a href="mailto:bookings@premierpetsclinic.com">bookings@premierpetsclinic.com</a></p>
-          </div>
+        <div class="gold-rule" aria-hidden="true">
+          <svg viewBox="0 0 100 130" width="24" height="31" fill="none">
+            <circle cx="50" cy="11" r="6.5" fill="url(#cad-c)"/>
+            <path d="M50 100 L16 46 M50 100 L84 46" stroke="url(#cad-c)" stroke-width="6" stroke-linecap="round"/>
+            <path d="M50 18 L50 100" stroke="url(#cad-c)" stroke-width="4.5" stroke-linecap="round"/>
+            <path d="M50 24 C36 33 64 44 50 54 C36 64 64 75 50 86" stroke="url(#cad-c)" stroke-width="4" stroke-linecap="round"/>
+            <defs><linearGradient id="cad-c" x1="18" y1="8" x2="82" y2="115" gradientUnits="userSpaceOnUse"><stop stop-color="#E3C56E"/><stop offset="1" stop-color="#BE9B45"/></linearGradient></defs>
+          </svg>
+        </div>
+        <h2>Ready to give your pet the best care in Doha?</h2>
+        <p>Book online in under a minute, or call and our front desk will find you a time — often the same day.</p>
+        <div class="cta-band__actions">
+          <a href="contact.html" class="btn btn--gold btn--lg">Book Appointment</a>
+          <a href="tel:30011105" class="btn btn--ghost-light btn--lg">Call 3001 1105</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
+  <!-- ===== Footer (shared across all pages) ===== -->
   <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <a href="#home" class="nav__logo nav__logo--footer">
-          <svg class="nav__logo-mark" viewBox="0 0 44 44" aria-hidden="true">
-            <circle cx="22" cy="22" r="21" fill="#0E0D0A"/>
-            <g stroke="#C9A951" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 11 L22 31 L30 11"/>
-              <path d="M14.5 18.5 C18.5 15.5 25.5 21.5 29.5 18.5"/>
-              <path d="M22 31 L22 36"/>
-            </g>
-          </svg>
-          <span class="nav__logo-text">Premier Pets Clinic</span>
-        </a>
-        <p class="footer__arabic" lang="ar" dir="rtl">بريمير بيتس كلينك</p>
-        <p>Compassionate, modern veterinary medicine for the pets of Dubai. Open Saturday – Thursday, 9 AM – 10 PM.</p>
-      </div>
-      <div class="footer__col">
-        <h4>Quick Links</h4>
-        <a href="#services">Services</a>
-        <a href="#about">About Us</a>
-        <a href="#team">Our Vets</a>
-        <a href="#appointment">Book a Visit</a>
-      </div>
-      <div class="footer__col">
-        <h4>Services</h4>
-        <a href="#services">Wellness Exams</a>
-        <a href="#services">Vaccinations</a>
-        <a href="#services">Surgery</a>
-        <a href="#services">Emergency Care</a>
-      </div>
-      <div class="footer__col">
-        <h4>Contact</h4>
-        <a href="tel:30011105">3001 1105</a>
-        <a href="mailto:hello@premierpetsclinic.com">hello@premierpetsclinic.com</a>
-        <a href="#contact">Al Wasl Road, Jumeirah,<br/>Dubai, UAE</a>
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="brand" aria-label="Premier Pets Clinic — home">
+            <svg viewBox="0 0 100 130" width="28" height="36" fill="none" aria-hidden="true">
+              <circle cx="50" cy="11" r="6.5" fill="url(#cad-f)"/>
+              <path d="M50 100 L16 46 M50 100 L84 46" stroke="url(#cad-f)" stroke-width="6" stroke-linecap="round"/>
+              <path d="M50 18 L50 100" stroke="url(#cad-f)" stroke-width="4.5" stroke-linecap="round"/>
+              <path d="M50 24 C36 33 64 44 50 54 C36 64 64 75 50 86" stroke="url(#cad-f)" stroke-width="4" stroke-linecap="round"/>
+              <defs><linearGradient id="cad-f" x1="18" y1="8" x2="82" y2="115" gradientUnits="userSpaceOnUse"><stop stop-color="#E3C56E"/><stop offset="1" stop-color="#BE9B45"/></linearGradient></defs>
+            </svg>
+            <span class="brand__text">
+              <span class="brand__en">Premier Pets Clinic</span>
+              <span class="brand__ar" lang="ar" dir="rtl">بريمير بيتس كلينك</span>
+            </span>
+          </a>
+          <p class="footer__tag">Precise, gentle veterinary care for the cats and dogs of Doha — in English and Arabic.</p>
+          <div class="footer__social">
+            <!-- TODO: replace with real detail — social media profile links -->
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <!-- TODO: replace with real detail — confirm WhatsApp number & country code -->
+            <a href="https://wa.me/97430011105" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.2L2.1 22l4.9-1.6A9.9 9.9 0 1 0 12.04 2Zm0 1.7a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 0 1 12.04 3.7ZM8.9 8c-.2 0-.5.1-.7.4-.2.2-.9.8-.9 2s.9 2.4 1 2.6c.1.2 1.8 2.9 4.4 3.9 2.2.9 2.6.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-.9-1-1.2-1.7-.1-.2 0-.4.1-.5l.6-.7c.2-.2.2-.4.1-.6-.1-.2-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.9Z"/></svg></a>
+          </div>
+        </div>
+
+        <nav class="footer__col" aria-label="Footer">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="about.html">About &amp; Team</a></li>
+            <li><a href="contact.html">Contact &amp; Booking</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h4>Opening hours</h4>
+          <div class="hours-table">
+            <div><span>Sat – Thu</span><span>9:00 AM – 10:00 PM</span></div>
+            <div><span>Friday</span><span>Closed</span></div>
+            <div class="muted-row"><span>Emergencies</span><span><a href="tel:30011105">Call 3001 1105</a></span></div>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Find us</h4>
+          <div class="footer__contact">
+            <address>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <!-- TODO: replace with real detail — street address -->
+              <span>Al Waab Street<br/>Doha, Qatar</span>
+            </address>
+            <a href="tel:30011105">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>3001 1105</span>
+            </a>
+            <a href="mailto:hello@premierpetsclinic.com">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>hello@premierpetsclinic.com</span>
+            </a>
+            <!-- TODO: replace with real detail — map embed / location image -->
+            <figure class="map-ph map-ph--mini">
+              <figcaption>
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Map placeholder</span>
+                <small>Directions on the contact page</small>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© <span id="year"></span> Premier Pets Clinic. All rights reserved. Made with ❤️ for pets.</p>
+      <p>© <span data-year>2026</span> Premier Pets Clinic · <span class="arabic" lang="ar" dir="rtl">بريمير بيتس كلينك</span> · All rights reserved</p>
     </div>
   </footer>
 
-  <a href="#home" class="scroll-top" id="scroll-top" aria-label="Back to top">↑</a>
-
-  <script>
-/* ============================================================
-   Premier Pets Clinic — Interactions
-   ============================================================ */
-
-// ----- Header shadow on scroll -----
-const header = document.getElementById('header');
-const scrollTopBtn = document.getElementById('scroll-top');
-
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 10);
-  scrollTopBtn.classList.toggle('visible', window.scrollY > 600);
-}, { passive: true });
-
-// ----- Mobile menu -----
-const navToggle = document.getElementById('nav-toggle');
-const navMenu = document.getElementById('nav-menu');
-
-navToggle.addEventListener('click', () => {
-  const isOpen = navMenu.classList.toggle('open');
-  navToggle.classList.toggle('open', isOpen);
-  navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-});
-
-navMenu.querySelectorAll('.nav__link').forEach((link) => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('open');
-    navToggle.classList.remove('open');
-  });
-});
-
-// ----- Active nav link while scrolling -----
-const sections = document.querySelectorAll('main section[id]');
-const navLinks = document.querySelectorAll('.nav__link');
-
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      navLinks.forEach((link) => {
-        link.classList.toggle(
-          'active-link',
-          link.getAttribute('href') === `#${entry.target.id}`
-        );
-      });
-    });
-  },
-  { rootMargin: '-40% 0px -55% 0px' }
-);
-sections.forEach((section) => sectionObserver.observe(section));
-
-// ----- Reveal-on-scroll animations -----
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
-
-// ----- Animated counters -----
-const animateCounter = (el) => {
-  const target = Number(el.dataset.target);
-  const duration = 1800;
-  const start = performance.now();
-
-  const tick = (now) => {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.round(target * eased).toLocaleString();
-    if (progress < 1) requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-};
-
-const counterObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.6 }
-);
-document.querySelectorAll('.counter').forEach((el) => counterObserver.observe(el));
-
-// ----- Testimonial slider -----
-const track = document.getElementById('slider-track');
-const slides = track.children;
-const dotsWrap = document.getElementById('slider-dots');
-let currentSlide = 0;
-let autoplay;
-
-for (let i = 0; i < slides.length; i++) {
-  const dot = document.createElement('button');
-  dot.className = 'slider__dot' + (i === 0 ? ' active' : '');
-  dot.setAttribute('aria-label', `Go to review ${i + 1}`);
-  dot.addEventListener('click', () => goToSlide(i));
-  dotsWrap.appendChild(dot);
-}
-const dots = dotsWrap.children;
-
-function goToSlide(index) {
-  currentSlide = (index + slides.length) % slides.length;
-  track.style.transform = `translateX(-${currentSlide * 100}%)`;
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].classList.toggle('active', i === currentSlide);
-  }
-  restartAutoplay();
-}
-
-function restartAutoplay() {
-  clearInterval(autoplay);
-  autoplay = setInterval(() => goToSlide(currentSlide + 1), 6000);
-}
-
-document.getElementById('prev-btn').addEventListener('click', () => goToSlide(currentSlide - 1));
-document.getElementById('next-btn').addEventListener('click', () => goToSlide(currentSlide + 1));
-restartAutoplay();
-
-// ----- Appointment form -----
-const form = document.getElementById('appointment-form');
-const successMsg = document.getElementById('form-success');
-
-// Block past dates in the date picker
-const dateInput = document.getElementById('date');
-dateInput.min = new Date().toISOString().split('T')[0];
-
-// The clinic is closed on Fridays
-const isFriday = (value) => new Date(`${value}T12:00:00`).getDay() === 5;
-
-dateInput.addEventListener('change', () => {
-  if (dateInput.value && isFriday(dateInput.value)) {
-    dateInput.classList.add('error');
-    dateInput.setCustomValidity('We are closed on Fridays — please pick another day.');
-    dateInput.reportValidity();
-  } else {
-    dateInput.setCustomValidity('');
-  }
-});
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  let valid = true;
-  form.querySelectorAll('[required]').forEach((field) => {
-    const empty = !field.value.trim();
-    field.classList.toggle('error', empty);
-    if (empty) valid = false;
-  });
-
-  if (dateInput.value && isFriday(dateInput.value)) {
-    dateInput.classList.add('error');
-    dateInput.reportValidity();
-    valid = false;
-  }
-
-  if (!valid) return;
-
-  successMsg.hidden = false;
-  form.querySelector('button[type="submit"]').disabled = true;
-  setTimeout(() => {
-    form.reset();
-    successMsg.hidden = true;
-    form.querySelector('button[type="submit"]').disabled = false;
-  }, 5000);
-});
-
-form.querySelectorAll('[required]').forEach((field) => {
-  field.addEventListener('input', () => field.classList.remove('error'));
-});
-
-// ----- Footer year -----
-document.getElementById('year').textContent = new Date().getFullYear();
-
-  </script>
+  <script src="assets/site.js"></script>
 </body>
 </html>
