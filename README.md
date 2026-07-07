@@ -7,7 +7,7 @@ A four-page, conversion-focused website for Premier Pets Clinic — a veterinary
 | File | Purpose |
 |---|---|
 | `index.html` | Home — hero with booking CTA, trust strip, services preview, team preview, testimonials |
-| `services.html` | Services & pricing — plain-English cards with "from" prices, booking links, FAQ |
+| `services.html` | Services — plain-English cards with booking links, FAQ |
 | `about.html` | About & team — clinic story, values, vet cards with credentials |
 | `contact.html` | Contact & booking — appointment form (with inline success state), hours, map, first-visit guide |
 
@@ -46,4 +46,4 @@ The booking form has no backend — it shows an inline confirmation on submit. S
 
 ## Before going live
 
-Search the HTML for `TODO: replace with real detail` — these mark placeholders that need real content: street address, starting prices, social links, WhatsApp country code, team names/photos, clinic photos and the map embed.
+Search the HTML for `TODO: replace with real detail` — these mark placeholders that need real content: street address, social links, WhatsApp country code, team names/photos, clinic photos and the map embed.
