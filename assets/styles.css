@@ -792,11 +792,14 @@ a.info-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); b
     linear-gradient(165deg, #1D1C23, var(--onyx-panel));
   background-size: 28px 28px, 28px 28px, 100% 100%;
 }
-.map-ph figcaption { display: flex; flex-direction: column; align-items: center; gap: var(--s-2); font-size: 0.9rem; }
+.map-ph figcaption, .map-ph__inner { display: flex; flex-direction: column; align-items: center; gap: var(--s-2); font-size: 0.9rem; }
 .map-ph svg { color: var(--gold); }
 .map-ph small { color: rgba(246, 245, 242, 0.55); }
 .map-ph--mini { min-height: 130px; padding: var(--s-4); background-size: 22px 22px, 22px 22px, 100% 100%; margin-top: var(--s-2); }
-.map-ph--mini figcaption { gap: var(--s-1); font-size: 0.85rem; }
+.map-ph--mini figcaption, .map-ph--mini .map-ph__inner { gap: var(--s-1); font-size: 0.85rem; }
+a.map-ph { transition: transform 0.25s var(--ease-spring), border-color 0.2s ease, box-shadow 0.25s ease; }
+a.map-ph:hover { transform: translateY(-2px); border-color: var(--gold); box-shadow: var(--shadow-md); }
+a.map-ph:active { transform: translateY(0); }
 
 /* First visit steps */
 .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-5); counter-reset: step; }

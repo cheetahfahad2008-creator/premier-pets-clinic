@@ -46,4 +46,4 @@ The booking form has no backend — it shows an inline confirmation on submit. S
 
 ## Before going live
 
-Search the HTML for `TODO: replace with real detail` — these mark placeholders that need real content: street address, social links, WhatsApp country code, team names/photos, clinic photos and the map embed.
+Search the HTML for `TODO: replace with real detail` — these mark placeholders that need real content: written street address, Facebook page link, WhatsApp country code, team names/photos and clinic photos.
