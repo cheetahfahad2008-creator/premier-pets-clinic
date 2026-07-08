@@ -366,11 +366,13 @@ h3 { font-size: 1.16rem; letter-spacing: 0.06em; }
 /* ===== Trust strip ===== */
 .stats { background: var(--onyx-panel); color: var(--alabaster); padding: var(--s-7) 0; }
 .stats__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--s-6);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--s-6) var(--s-10);
   text-align: center;
 }
+.stat { min-width: 200px; }
 .stat h3 {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 2.6vw, 2rem);
@@ -916,7 +918,7 @@ a.info-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); b
   .hero__badge { left: 12px; bottom: 16px; }
 
   .cards-grid, .quotes-grid, .why-grid, .team-grid, .steps-grid { grid-template-columns: repeat(2, 1fr); }
-  .stats__grid { grid-template-columns: repeat(2, 1fr); gap: var(--s-5); }
+  .stats__grid { gap: var(--s-5) var(--s-8); }
   .story-grid, .booking-grid { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: 1fr 1fr; gap: var(--s-6); }
 }
