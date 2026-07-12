@@ -1,6 +1,6 @@
 # 🐾 Premier Pets Clinic
 
-A four-page, conversion-focused website for Premier Pets Clinic — a veterinary practice in Doha, Qatar. Built with plain HTML, CSS and JavaScript to the clinic's black & gold brand guidelines (v1.0, June 2026). No build step, no external dependencies — fonts are self-hosted.
+A four-page, conversion-focused website for Premier Pets Clinic — a veterinary practice in Doha, Qatar. Built with plain HTML, CSS and JavaScript to the clinic's bronze & rose-gold brand guidelines (v1.0). No build step, no external dependencies — fonts are self-hosted.
 
 ## Pages
 
@@ -15,8 +15,8 @@ All pages share an identical sticky header (with an always-visible **Book Appoin
 
 ## Brand
 
-- **Colors:** alabaster `#F6F5F2`, onyx `#16151A`, graphite `#54515A`, gold `#BE9B45`, gold light `#E3C56E` — gold reserved for hairlines, the caduceus mark and small accents.
-- **Type:** Cinzel (headings), Jost (body/interface), El Messiri (Arabic). Self-hosted in `assets/fonts/` (all SIL OFL licensed).
+- **Colors:** ivory `#F1ECE6` / paper `#FAF7F2` backgrounds, espresso `#2B1B10` text, bronze `#6B4130` primary accent, rose gold `#A37B68` secondary accent, champagne `#D4B9A8` hairlines and borders.
+- **Type:** Cormorant Garamond (headlines, wide-tracked caps), Lora (body/interface), Noto Naskh Arabic (Arabic). Self-hosted in `assets/fonts/` (all SIL OFL licensed).
 - **Bilingual:** the wordmark and key touchpoints carry both English and Arabic, per the guidelines.
 
 ## Structure
